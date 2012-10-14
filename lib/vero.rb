@@ -9,6 +9,8 @@ class Vero
       array.each do |hash|
         csv << [email_for_record(hash), event_for_record(hash), time_for_record(hash)]
       end
+
+      puts "CSV written to #{::File.expand_path('../../' + csv.path, __FILE__)}."
     end
   end
 
