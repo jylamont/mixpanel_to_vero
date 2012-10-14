@@ -30,7 +30,7 @@ class Mixpanel
 
     options = options.keys.sort.map { |k| "#{k}=#{options[k]}" }
 
-    sig = Digest::MD5.hexdigest(options.join("") + "dbc0006a1279def183605cc9ce9eca37")
+    sig = Digest::MD5.hexdigest(options.join("") + api_secret)
     options << "sig=#{sig}"
 
     options.join("&")
