@@ -6,9 +6,12 @@ This program currently supports CSV generation of passed events.
 
 ## Usage
 
+**This program require Ruby 1.8.7+ with the Bundler gem installed.**
+
 ```
 git clone https://github.com/jylamont/mixpanel_to_vero
 cd mixpanel_to_vero
+bundle install
 ruby app.rb api_key=abcd api_secret=1234 from_date=2012-10-05 to_date=2012-10-11
 ```
 
