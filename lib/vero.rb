@@ -4,7 +4,7 @@ class Vero
   def save_events_csv(array)
     csv_headers = ["Email", "Event name", "Time"]
 
-    CSV.open file_name("users"), "w" do |csv|
+    CSV.open file_name("events"), "w" do |csv|
       csv << csv_headers
       array.each do |hash|
         csv << [email_for_record(hash), event_for_record(hash), time_for_record(hash)]
